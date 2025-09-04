@@ -6,6 +6,7 @@ import { Benefits } from "@/components/Benefits";
 import { FeaturesGrid } from "@/components/FeaturesGrid";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Comparison } from "@/components/Comparison";
+import { BusinessTypes } from "@/components/BusinessTypes";
 import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -25,6 +26,7 @@ const Index = () => {
         <FeaturesGrid />
         <HowItWorks />
         <Comparison />
+        <BusinessTypes />
         <Pricing />
         <Faq />
         <FinalCTA />
