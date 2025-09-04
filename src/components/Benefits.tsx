@@ -36,7 +36,7 @@ export const Benefits = () => {
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="bg-transparent border-0 shadow-none text-white">
+            <Card key={index} className="bg-white/5 border border-white/10 backdrop-blur-lg text-white rounded-lg transition-all duration-300 hover:shadow-glow-primary hover:border-indigo-500/50 hover:-translate-y-2">
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="bg-indigo-900/50 rounded-full p-3 w-fit">
                   {benefit.icon}

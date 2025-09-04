@@ -36,7 +36,7 @@ export const Problem = () => {
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {painPoints.map((point, index) => (
-            <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-lg text-white text-center">
+            <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-lg text-white text-center transition-all duration-300 hover:shadow-glow-primary hover:border-indigo-500/50 hover:-translate-y-2">
               <CardHeader>
                 <div className="mx-auto bg-purple-900/50 rounded-full p-3 w-fit">
                   {point.icon}

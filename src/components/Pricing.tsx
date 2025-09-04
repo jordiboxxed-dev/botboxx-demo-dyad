@@ -13,7 +13,7 @@ export const Pricing = () => {
           Planes flexibles que crecen con tu negocio. Sin contratos, cancelá cuando quieras.
         </p>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card className="bg-white/5 border-white/10 text-white">
+          <Card className="bg-white/5 border-white/10 text-white backdrop-blur-lg transition-all duration-300 hover:shadow-glow-primary hover:border-indigo-500/50 hover:-translate-y-2">
             <CardHeader>
               <CardTitle>Prueba Gratuita</CardTitle>
               <CardDescription className="text-gray-400">Probá todas las funciones sin límites.</CardDescription>
@@ -31,7 +31,7 @@ export const Pricing = () => {
             </CardFooter>
           </Card>
 
-          <Card className="bg-white/10 border-indigo-500 text-white ring-2 ring-indigo-500">
+          <Card className="bg-white/10 border-indigo-500 text-white ring-2 ring-indigo-500 backdrop-blur-lg transition-all duration-300 hover:shadow-glow-primary hover:-translate-y-2">
             <CardHeader>
               <div className="flex justify-between items-center">
                 <CardTitle>Plan Pro</CardTitle>
@@ -53,7 +53,7 @@ export const Pricing = () => {
             </CardFooter>
           </Card>
 
-          <Card className="bg-white/5 border-white/10 text-white">
+          <Card className="bg-white/5 border-white/10 text-white backdrop-blur-lg transition-all duration-300 hover:shadow-glow-primary hover:border-indigo-500/50 hover:-translate-y-2">
             <CardHeader>
               <CardTitle>Enterprise</CardTitle>
               <CardDescription className="text-gray-400">Soluciones a medida para grandes equipos.</CardDescription>
