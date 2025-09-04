@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Bot, X, Send, MessageSquare } from "lucide-react";
+import { Bot, X, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -77,8 +77,8 @@ export const ChatWidget = () => {
         </Button>
       </div>
 
-      <div className={cn("fixed bottom-4 right-4 z-50 w-[calc(100%-2rem)] max-w-sm transition-all duration-300", isOpen ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none")}>
-        <Card className="h-[70vh] flex flex-col bg-slate-900/80 backdrop-blur-lg border-white/20 text-white">
+      <div className={cn("fixed bottom-4 right-4 z-50 w-[calc(100%-2rem)] max-w-xs transition-all duration-300", isOpen ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none")}>
+        <Card className="h-[65vh] flex flex-col bg-slate-900/80 backdrop-blur-lg border-white/20 text-white">
           <CardHeader className="flex flex-row items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center gap-3">
               <Bot className="h-6 w-6 text-indigo-400" />
@@ -93,12 +93,18 @@ export const ChatWidget = () => {
               <div className="space-y-4">
                 {messages.map((msg, index) => (
                   <div key={index} className={cn("flex", msg.sender === "user" ? "justify-end" : "justify-start")}>
-                    <div className={cn("max-w-[80%] rounded-lg px-4 py-2", msg.sender === "user" ? "bg-indigo-500 text-white" : "bg-slate-700 text-slate-200")}>
-                      <p className="text-sm">{msg.text}</p>
+                    <div className={cn("max-w-[90%] rounded-lg px-4 py-2", msg.sender === "user" ? "bg-indigo-500 text-white" : "bg-slate-700 text-slate-200")}>
+                      <p className="text-sm whitespace-pre-wrap">{msg.text}</p>
                       {msg.options && (
                         <div className="mt-3 space-y-2">
                           {msg.options.map(opt => (
-                            <Button key={opt.id} variant="outline" size="sm" className="w-full bg-transparent border-white/20 hover:bg-white/10" onClick={() => handleOptionClick(opt)}>
+                            <Button 
+                              key={opt.id} 
+                              variant="outline" 
+                              size="sm" 
+                              className="w-full bg-transparent border-white/20 hover:bg-white/10 justify-start text-left h-auto py-2 whitespace-normal" 
+                              onClick={() => handleOptionClick(opt)}
+                            >
                               {opt.question}
                             </Button>
                           ))}
