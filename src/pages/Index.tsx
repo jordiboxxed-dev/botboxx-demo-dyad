@@ -8,6 +8,7 @@ import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
+import { LeadForm } from "@/components/LeadForm";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <Pricing />
         <Faq />
         <FinalCTA />
+        <LeadForm />
       </main>
       <Footer />
     </div>

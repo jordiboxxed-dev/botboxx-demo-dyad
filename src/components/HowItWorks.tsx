@@ -31,8 +31,8 @@ export const HowItWorks = () => {
           </div>
         </div>
         <div className="mt-12">
-          <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6">
-            EMPEZAR AHORA GRATIS
+          <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6">
+            <a href="#lead-form">EMPEZAR AHORA GRATIS</a>
           </Button>
         </div>
       </div>

@@ -25,7 +25,9 @@ export const Pricing = () => {
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Soporte por email</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-indigo-500 hover:bg-indigo-600">Empezar Prueba</Button>
+              <Button asChild className="w-full bg-indigo-500 hover:bg-indigo-600">
+                <a href="#lead-form">Empezar Prueba</a>
+              </Button>
             </CardFooter>
           </Card>
 
@@ -45,7 +47,9 @@ export const Pricing = () => {
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Soporte prioritario</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-emerald-500 hover:bg-emerald-600">Elegir Plan Pro</Button>
+              <Button asChild className="w-full bg-emerald-500 hover:bg-emerald-600">
+                <a href="#lead-form">Elegir Plan Pro</a>
+              </Button>
             </CardFooter>
           </Card>
 
@@ -62,7 +66,9 @@ export const Pricing = () => {
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Onboarding y training</p>
             </CardContent>
             <CardFooter>
-              <Button variant="outline" className="w-full text-white border-white/20 hover:bg-white/10 hover:text-white">Contactar Ventas</Button>
+              <Button asChild variant="outline" className="w-full text-white border-white/20 hover:bg-white/10 hover:text-white">
+                <a href="#lead-form">Contactar Ventas</a>
+              </Button>
             </CardFooter>
           </Card>
         </div>

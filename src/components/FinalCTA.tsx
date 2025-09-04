@@ -11,11 +11,11 @@ export const FinalCTA = () => {
           Únete a cientos de empresas que ya están convirtiendo más leads y ahorrando miles de dólares con BotBoxx.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6">
-            PROBAR GRATIS AHORA
+          <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6">
+            <a href="#lead-form">PROBAR GRATIS AHORA</a>
           </Button>
-          <Button size="lg" variant="outline" className="text-white border-white/20 hover:bg-white/10 hover:text-white px-8 py-6">
-            Ver Demo en Vivo
+          <Button asChild size="lg" variant="outline" className="text-white border-white/20 hover:bg-white/10 hover:text-white px-8 py-6">
+            <a href="#lead-form">Ver Demo en Vivo</a>
           </Button>
         </div>
       </div>

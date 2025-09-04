@@ -13,8 +13,8 @@ export const Hero = () => {
           La única plataforma que convierte tu información en un vendedor virtual que nunca duerme, califica leads automáticamente y llena tu agenda con clientes listos para comprar.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6 animate-pulse">
-            PROBAR GRATIS AHORA
+          <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6 animate-pulse">
+            <a href="#lead-form">PROBAR GRATIS AHORA</a>
           </Button>
         </div>
         <div className="mt-6 flex justify-center items-center space-x-4 text-sm text-gray-400">
