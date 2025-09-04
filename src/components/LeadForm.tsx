@@ -17,8 +17,8 @@ export const LeadForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!name || !email) {
-      showError("Por favor, completá tu nombre y email.");
+    if (!name || !email || !phone) {
+      showError("Por favor, completá todos los campos.");
       return;
     }
 
@@ -36,10 +36,13 @@ export const LeadForm = () => {
       showError("Hubo un error al enviar tus datos. Intentá de nuevo.");
       console.error("Error inserting lead:", error);
     } else {
-      showSuccess("¡Gracias! Recibimos tus datos correctamente.");
+      showSuccess("¡Gracias! Te estamos redirigiendo...");
       setName("");
       setEmail("");
       setPhone("");
+      
+      // Redirigir al usuario
+      window.location.href = "https://botboxx-demo.vercel.app/";
     }
   };
 
@@ -79,7 +82,7 @@ export const LeadForm = () => {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="phone">Teléfono (Opcional)</Label>
+                <Label htmlFor="phone">Teléfono</Label>
                 <Input 
                   id="phone" 
                   type="tel" 
@@ -87,6 +90,7 @@ export const LeadForm = () => {
                   className="bg-transparent" 
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                  required
                 />
               </div>
               <Button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-lg font-bold py-6" disabled={loading}>
