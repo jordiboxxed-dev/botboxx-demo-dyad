@@ -18,6 +18,12 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(to right, #6366F1, #8B5CF6)',
+      },
+      boxShadow: {
+        'glow-primary': '0 0 20px 0px rgba(139, 92, 246, 0.5)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -103,3 +103,9 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+}

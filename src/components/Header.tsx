@@ -17,7 +17,7 @@ export const Header = () => {
             <a href="#pricing" className="transition-colors hover:text-foreground/80 text-foreground/60">Precios</a>
             <a href="#faq" className="transition-colors hover:text-foreground/80 text-foreground/60">FAQ</a>
           </nav>
-          <Button asChild className="bg-indigo-500 hover:bg-indigo-600 text-white">
+          <Button asChild className="bg-gradient-primary text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-primary">
             <a href="#lead-form">Probar Gratis</a>
           </Button>
         </div>

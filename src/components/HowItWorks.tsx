@@ -31,7 +31,7 @@ export const HowItWorks = () => {
           </div>
         </div>
         <div className="mt-12">
-          <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold px-8 py-6">
+          <Button asChild size="lg" className="bg-gradient-primary text-white text-lg font-bold px-10 py-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-primary">
             <a href="#lead-form">EMPEZAR AHORA GRATIS</a>
           </Button>
         </div>

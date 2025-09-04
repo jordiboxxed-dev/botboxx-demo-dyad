@@ -49,7 +49,7 @@ export const LeadForm = () => {
   return (
     <section id="lead-form" className="py-20 sm:py-32">
       <div className="container max-w-2xl mx-auto">
-        <Card className="bg-white/5 border-white/10 text-white">
+        <Card className="bg-white/5 border-white/10 text-white backdrop-blur-sm">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold">Recibí tu Agente IA Gratis</CardTitle>
             <CardDescription className="text-gray-300 pt-2">
@@ -93,7 +93,7 @@ export const LeadForm = () => {
                   required
                 />
               </div>
-              <Button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-lg font-bold py-6" disabled={loading}>
+              <Button type="submit" className="w-full bg-gradient-primary text-white text-lg font-bold py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-primary" disabled={loading}>
                 {loading ? "ENVIANDO..." : "QUIERO MI ACCESO GRATIS"}
               </Button>
             </form>
