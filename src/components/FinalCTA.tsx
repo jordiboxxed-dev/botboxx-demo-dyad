@@ -14,7 +14,7 @@ export const FinalCTA = () => {
           <Button asChild size="lg" className="bg-gradient-primary text-white text-lg font-bold px-10 py-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-primary">
             <a href="#lead-form">PROBAR GRATIS AHORA</a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="text-white border-indigo-400/50 hover:border-indigo-400 hover:bg-indigo-500/10 hover:text-white px-8 py-6 rounded-full transition-all duration-300">
+          <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-indigo-400/50 hover:border-indigo-400 hover:bg-indigo-500/10 hover:text-white px-8 py-6 rounded-full transition-all duration-300">
             <a href="#lead-form">Ver Demo en Vivo</a>
           </Button>
         </div>

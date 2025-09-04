@@ -66,7 +66,7 @@ export const Pricing = () => {
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Onboarding y training</p>
             </CardContent>
             <CardFooter>
-              <Button asChild variant="outline" className="w-full text-white border-white/20 hover:bg-white/10 hover:text-white">
+              <Button asChild variant="outline" className="w-full bg-transparent text-white border-white/20 hover:bg-white/10 hover:text-white">
                 <a href="#lead-form">Contactar Ventas</a>
               </Button>
             </CardFooter>
