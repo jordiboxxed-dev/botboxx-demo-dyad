@@ -1,9 +1,48 @@
+"use client";
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { supabase } from "@/integrations/supabase/client";
+import { showSuccess, showError, showLoading, dismissToast } from "@/utils/toast";
 
 export const LeadForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!name || !email) {
+      showError("Por favor, completá tu nombre y email.");
+      return;
+    }
+
+    setLoading(true);
+    const toastId = showLoading("Enviando tus datos...");
+
+    const { error } = await supabase
+      .from("leads")
+      .insert([{ name, email, phone }]);
+
+    dismissToast(toastId);
+    setLoading(false);
+
+    if (error) {
+      showError("Hubo un error al enviar tus datos. Intentá de nuevo.");
+      console.error("Error inserting lead:", error);
+    } else {
+      showSuccess("¡Gracias! Recibimos tus datos correctamente.");
+      setName("");
+      setEmail("");
+      setPhone("");
+    }
+  };
+
   return (
     <section id="lead-form" className="py-20 sm:py-32">
       <div className="container max-w-2xl mx-auto">
@@ -15,21 +54,43 @@ export const LeadForm = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Nombre Completo</Label>
-                <Input id="name" placeholder="Ej: Juan Pérez" className="bg-transparent" />
+                <Input 
+                  id="name" 
+                  placeholder="Ej: Juan Pérez" 
+                  className="bg-transparent" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="tu@email.com" className="bg-transparent" />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="tu@email.com" 
+                  className="bg-transparent" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="phone">Teléfono</Label>
-                <Input id="phone" type="tel" placeholder="+54 9 11 1234-5678" className="bg-transparent" />
+                <Label htmlFor="phone">Teléfono (Opcional)</Label>
+                <Input 
+                  id="phone" 
+                  type="tel" 
+                  placeholder="+54 9 11 1234-5678" 
+                  className="bg-transparent" 
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
               </div>
-              <Button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-lg font-bold py-6">
-                QUIERO MI ACCESO GRATIS
+              <Button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-lg font-bold py-6" disabled={loading}>
+                {loading ? "ENVIANDO..." : "QUIERO MI ACCESO GRATIS"}
               </Button>
             </form>
           </CardContent>
