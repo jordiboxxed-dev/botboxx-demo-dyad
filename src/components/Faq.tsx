@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const faqs = [
   {
@@ -24,28 +26,42 @@ const faqs = [
 ];
 
 export const Faq = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section id="faq" className="py-20 sm:py-32">
-      <div className="container max-w-5xl mx-auto">
+      <div className="container max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
           Preguntas Frecuentes
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <Card 
-              key={index} 
+              key={index}
               className="
                 bg-white/5 border border-white/10 backdrop-blur-lg text-white
                 transition-all duration-300 hover:shadow-glow-primary hover:border-indigo-500/50
-                transform hover:-translate-y-2 overflow-hidden
+                overflow-hidden cursor-pointer
               "
+              onClick={() => toggleAccordion(index)}
             >
               <CardHeader className="pb-3">
-                <CardTitle className="text-lg font-bold text-left">{faq.question}</CardTitle>
+                <div className="flex justify-between items-center">
+                  <CardTitle className="text-lg font-bold text-left">{faq.question}</CardTitle>
+                  <ChevronDown 
+                    className={`h-5 w-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
+                  />
+                </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 text-left">{faq.answer}</p>
-              </CardContent>
+              {openIndex === index && (
+                <CardContent className="pt-0">
+                  <p className="text-gray-300">{faq.answer}</p>
+                </CardContent>
+              )}
             </Card>
           ))}
         </div>
