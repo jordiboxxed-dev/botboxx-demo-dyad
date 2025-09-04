@@ -9,6 +9,7 @@ import { Faq } from "@/components/Faq";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { LeadForm } from "@/components/LeadForm";
+import { ChatWidget } from "@/components/ChatWidget";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <LeadForm />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 };
