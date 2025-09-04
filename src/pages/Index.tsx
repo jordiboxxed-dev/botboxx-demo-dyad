@@ -4,6 +4,7 @@ import { VSL } from "@/components/VSL";
 import { Problem } from "@/components/Problem";
 import { Benefits } from "@/components/Benefits";
 import { HowItWorks } from "@/components/HowItWorks";
+import { Comparison } from "@/components/Comparison";
 import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -21,6 +22,7 @@ const Index = () => {
         <Problem />
         <Benefits />
         <HowItWorks />
+        <Comparison />
         <Pricing />
         <Faq />
         <FinalCTA />
