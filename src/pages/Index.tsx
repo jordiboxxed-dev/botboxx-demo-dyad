@@ -1,17 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { Problem } from "@/components/Problem";
+import { Benefits } from "@/components/Benefits";
+import { HowItWorks } from "@/components/HowItWorks";
+import { Pricing } from "@/components/Pricing";
+import { Faq } from "@/components/Faq";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
-      <MadeWithDyad />
+    <div className="bg-slate-900 text-white">
+      <Header />
+      <main>
+        <Hero />
+        <Problem />
+        <Benefits />
+        <HowItWorks />
+        <Pricing />
+        <Faq />
+        <FinalCTA />
+      </main>
+      <Footer />
     </div>
   );
 };
