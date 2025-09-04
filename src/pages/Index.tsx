@@ -13,6 +13,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { LeadForm } from "@/components/LeadForm";
 import { ChatWidget } from "@/components/ChatWidget";
+import { AutomationSteps } from "@/components/AutomationSteps";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
         <VSL />
         <Problem />
         <Benefits />
+        <AutomationSteps />
         <FeaturesGrid />
         <HowItWorks />
         <Comparison />
