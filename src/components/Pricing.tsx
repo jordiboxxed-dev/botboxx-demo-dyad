@@ -41,7 +41,7 @@ export const Pricing = () => {
               <p className="text-4xl font-bold pt-4">$99 <span className="text-lg font-normal text-gray-400">/ mes</span></p>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Agentes IA ilimitados</p>
+              <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> 1 Agente IA</p>
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Integración con CRM</p>
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Analíticas avanzadas</p>
               <p className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Soporte prioritario</p>
