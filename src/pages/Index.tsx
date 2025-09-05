@@ -5,7 +5,7 @@ import { Problem } from "@/components/Problem";
 import { Benefits } from "@/components/Benefits";
 import { FeaturesGrid } from "@/components/FeaturesGrid";
 import { HowItWorks } from "@/components/HowItWorks";
-import { Comparison } from "@/components/Comparison";
+import { Revolution } from "@/components/Revolution";
 import { BusinessTypes } from "@/components/BusinessTypes";
 import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
@@ -27,7 +27,7 @@ const Index = () => {
         <AutomationSteps />
         <FeaturesGrid />
         <HowItWorks />
-        <Comparison />
+        <Revolution />
         <BusinessTypes />
         <Pricing />
         <Faq />
