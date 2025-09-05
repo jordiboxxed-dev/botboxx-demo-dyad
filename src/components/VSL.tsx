@@ -7,7 +7,7 @@ export const VSL = () => {
         </h2>
         <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl shadow-indigo-500/20 border border-white/10">
           <iframe
-            src="https://www.youtube.com/embed/Sc6XqDuDoT0"
+            src="https://www.youtube.com/embed/zfiEzlRGOMs"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
