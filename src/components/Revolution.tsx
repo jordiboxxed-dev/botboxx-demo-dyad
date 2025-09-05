@@ -34,10 +34,10 @@ export const Revolution = () => {
         </p>
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <Card className="bg-slate-900/50 border border-red-500/30 p-8 rounded-2xl">
+          <Card className="bg-black/20 backdrop-blur-lg border border-red-500/30 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-red-500/40">
             <div className="text-center">
               <span className="text-5xl">😰</span>
-              <h3 className="mt-4 text-2xl font-bold">El Caos de Antes</h3>
+              <h3 className="mt-4 text-2xl font-bold text-red-400">El Caos de Antes</h3>
             </div>
             <ul className="mt-8 space-y-6">
               {beforeData.map((item, index) => (
@@ -52,10 +52,10 @@ export const Revolution = () => {
             </ul>
           </Card>
 
-          <Card className="bg-slate-900/50 border border-emerald-500/30 p-8 rounded-2xl ring-2 ring-emerald-500/50 shadow-glow-primary">
+          <Card className="bg-black/20 backdrop-blur-lg border border-emerald-500/30 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-emerald-500/40">
              <div className="text-center">
               <span className="text-5xl">🚀</span>
-              <h3 className="mt-4 text-2xl font-bold">La Transformación</h3>
+              <h3 className="mt-4 text-2xl font-bold text-emerald-400">La Transformación</h3>
             </div>
             <ul className="mt-8 space-y-6">
               {afterData.map((item, index) => (
