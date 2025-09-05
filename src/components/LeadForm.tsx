@@ -29,7 +29,7 @@ export const LeadForm = () => {
       .from("leads")
       .insert([{ name, email, phone }]);
 
-    dismissToast(toastId);
+    dismissToast(toastId.toString()); // Convert to string to fix TypeScript error
     setLoading(false);
 
     if (error) {
