@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, BrainCircuit, Sparkles, ArrowRight } from "lucide-react";
+import { FileText, Brain, Sparkles, ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -14,7 +14,7 @@ const steps = [
   },
   {
     number: 2,
-    icon: <BrainCircuit className="h-8 w-8 text-purple-400" />,
+    icon: <Brain className="h-8 w-8 text-purple-400" />,
     title: "Se Entrena Solo",
     emoji: "🤖",
     description: "La IA aprende tu negocio automáticamente, sin configuraciones complejas.",
